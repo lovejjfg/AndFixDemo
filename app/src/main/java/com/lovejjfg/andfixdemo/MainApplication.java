@@ -32,19 +32,23 @@ import java.io.IOException;
  * 
  */
 public class MainApplication extends Application {
-	private static final String TAG = "euler";
+	private static final String TAG = "hotfix";
 
 	private static final String APATCH_PATH = "/out.apatch";
-	/**
-	 * patch manager
-	 */
-	private PatchManager mPatchManager;
 
 	@Override
 	public void onCreate() {
 		super.onCreate();
 		// initialize
-		mPatchManager = new PatchManager(this);
+		initPatchManager();
+
+	}
+
+	private void initPatchManager() {
+		/*
+	  patch manager
+	 */
+		PatchManager mPatchManager = new PatchManager(this);
 		mPatchManager.init("1.0");
 		Log.d(TAG, "inited.");
 
@@ -62,6 +66,5 @@ public class MainApplication extends Application {
 		} catch (IOException e) {
 			Log.e(TAG, "", e);
 		}
-
 	}
 }

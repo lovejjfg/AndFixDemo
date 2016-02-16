@@ -20,7 +20,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.lovejjfg.andfixdemo.test.A;
+import com.lovejjfg.andfixdemo.test.Fix;
 
 
 /**
@@ -36,9 +36,9 @@ public class MainActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		Log.e(TAG, A.a("good"));
-		Log.e(TAG, "" + new A().b("s1", "s2"));
-		Log.e(TAG, "" + new A().getI());
+		Log.e(TAG, Fix.a("good"));
+		Log.e(TAG, "" + new Fix().b("s1", "s2"));
+//		Log.e(TAG, "" + new Fix().getI());
 	}
 
 	@Override
